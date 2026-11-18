@@ -27,6 +27,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
       - name: Verify Java and run the real Swing walkthrough
         run: |
           mvn -B clean verify
@@ -40,7 +43,7 @@ jobs:
         run: |
           npm install --prefix "$RUNNER_TEMP/pbl" pptxgenjs@3.12.0
           NODE_PATH="$RUNNER_TEMP/pbl/node_modules" node .github/scripts/presentation.cjs build-pbl/screens dist
-          python -m pip install reportlab==4.4.1 Pillow==11.2.1 pypdf==5.9.0
+          python -m pip install --only-binary=:all: reportlab==4.4.1 Pillow==11.2.1 pypdf==5.9.0
           python .github/scripts/report_and_video.py build-pbl/screens dist
           python - <<'PY'
           import zipfile, re
