@@ -35,6 +35,6 @@ The app is designed for a local desk on one computer. It has no in-app login or 
 
 ## Verification
 
-The initial Windows workspace build compiled and packaged the app with Java 17. Its 12 integration tests passed, including creation, editing, combined filters, photo validation and persistence, claim and return rules, rollback, and a race between two claims. After the Windows session disconnected, the project was transferred with minor UI and packaging differences. Run the same command above to verify this checkout.
+Java 17 and Maven successfully built the executable JAR. The 12 integration tests passed, including creation, editing, combined filters, photo validation and persistence, claim and return rules, rollback, and a race between two claims.
 
-See [PBL demonstration and viva](docs/PBL.md) and [design notes](docs/DESIGN.md).
+See [PBL demonstration and viva](docs/PBL.md), [lab file notes](docs/LAB_LOG.md), and [design notes](docs/DESIGN.md). The [PBL submission release](https://github.com/SathwikGadchanda/student-expense-tracker-java-2/releases/tag/pbl-v1.0.0) contains the packaged JAR, PowerPoint, report, walkthrough and test results after the packaging workflow succeeds.
